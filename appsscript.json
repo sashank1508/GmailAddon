@@ -1,0 +1,38 @@
+{
+    "timeZone": "Asia/Kolkata",
+    "dependencies": {},
+    "exceptionLogging": "STACKDRIVER",
+    "runtimeVersion": "V8",
+    "oauthScopes": [
+      "https://www.googleapis.com/auth/gmail.addons.execute",
+      "https://www.googleapis.com/auth/gmail.addons.current.message.action",
+      "https://www.googleapis.com/auth/gmail.addons.current.message.metadata",
+      "https://www.googleapis.com/auth/gmail.readonly",
+      "https://www.googleapis.com/auth/gmail.modify",
+      "https://www.googleapis.com/auth/script.external_request"
+    ],
+    "gmail": {
+      "name": "Email Enricher",
+      "logoUrl": "https://yt3.googleusercontent.com/ELJ5EBMbUXGHbgyVTrK2VUHoWCel59iveC5OcWQFFTugmvfKh3Kg-NkIdoKfCkWzwCCAlRp6Q_c=s900-c-k-c0x00ffffff-no-rj",
+      "primaryColor": "#4285F4",
+      "secondaryColor": "#34A853",
+      "universalActions": [
+        {
+          "text": "Enrich Lead Details",
+          "runFunction": "buildAddOnCard"
+        }
+      ],
+      "openLinkUrlPrefixes": [
+        "https://www.apollo.io/"
+      ],
+      "contextualTriggers": [
+        {
+          "unconditional": {},
+          "onTriggerFunction": "buildAddOnCard"
+        }
+      ],
+      "homepageTrigger": {
+        "runFunction": "buildAddOnCard"
+      }
+    }
+}
